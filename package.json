@@ -5,19 +5,28 @@
   "dependencies": {
     "bulma": "^0.6.1",
     "copy-to-clipboard": "^3.0.8",
+    "express": "^4.16.2",
     "lodash.flow": "^3.5.0",
+    "nodemon": "^1.12.1",
     "react": "^16.1.1",
     "react-dom": "^16.1.1",
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.0.17",
     "simple-peer": "^8.1.1",
+    "socket.io": "^2.0.4",
     "socket.io-client": "^2.0.4",
     "uuid": "^3.1.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "dev": "npm-run-all --parallel start-*",
+    "start": "node ./server/signaling-server.js",
+    "start-signaling-server": "nodemon ./server/signaling-server.js",
+    "start-client": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.2"
   }
 }
