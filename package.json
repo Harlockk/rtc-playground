@@ -2,6 +2,7 @@
   "name": "rtc-playground",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:9999",
   "dependencies": {
     "bulma": "^0.6.1",
     "copy-to-clipboard": "^3.0.8",

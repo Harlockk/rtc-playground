@@ -1,7 +1,7 @@
 import io from "socket.io-client";
 import { flow } from "lodash";
 
-const SIGNALING_SERVER_IP = `${window.location.protocol}//${window.location.hostname}:9999`;
+const SIGNALING_SERVER_IP = `${window.location.protocol}//${window.location.hostname}:${window.location.port}`;
 let socket = null;
 
 function connectToSocket(namespace = "") {

@@ -28,7 +28,7 @@ class App extends Component {
               />
               <Route
                 exact
-                path="/:roomId"
+                path="/r/:roomId"
                 render={props => (
                   <SocketProvider {...props}>
                     <Receiver />

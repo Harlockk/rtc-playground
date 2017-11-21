@@ -22,7 +22,11 @@ io.on("connection", socket => {
 
 app.use(express.static(path.resolve(__dirname + "/../build")));
 
-app.get("/:token", function(req, res) {
+app.get("/", function(req, res) {
+  res.sendFile(path.resolve(__dirname + "/../build/index.html"));
+});
+
+app.get("/r/:token", function(req, res) {
   res.sendFile(path.resolve(__dirname + "/../build/index.html"));
 });
 

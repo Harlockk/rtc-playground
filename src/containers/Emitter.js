@@ -54,7 +54,7 @@ class Emitter extends Component {
       return <PeerChat peer={this.peer} />;
     }
 
-    const offerLink = `${window.location.href}${this.roomId}`;
+    const offerLink = `${window.location.href}r/${this.roomId}`;
 
     return (
       <div>
